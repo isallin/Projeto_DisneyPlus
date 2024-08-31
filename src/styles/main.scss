@@ -1,24 +1,14 @@
-@use 'hero';
-
-.hero {
-    padding: 5.6vw;
-    min-height: 80vh;
-    background-image: url(../images/hero_desktop.jpeg);
-}
-
-$corDeFundo:#040714;
-$corTextoPrincipal: silver;
-$corTextoSecundario: #f9f9f9;
+@use 'variaveis';
 
 @mixin text($fontSize:16px){
     font-size: $fontSize;
     line-height: $fontSize + 10px;
-    color: $corTextoPrincipal;
+    color: variaveis.$corTextoPrincipal;
 }
 
 @mixin title($fontSize:40px){
     @include title($fontSize);
-    color: $corTextoSecundario;
+    color: variaveis.$corTextoSecundario;
 }
 
 *{
@@ -28,41 +18,42 @@ $corTextoSecundario: #f9f9f9;
 }
 
 body{
-    background-color: $corDeFundo;
+    background-color: variaveis.$corDeFundo;
 }
-
-/*TEXTOS NORMAIS*/
 
 .text{
     @include text;
-}
 
-.text--big{
-    @include text(18px);
-}
+    &--big{
+        @include text(18px);
+    }
 
-.text--small{
-    @include text(12px)
+    &--small{
+        @include text(12px)
+    }
 }
-
-/*TÍTULOS*/
 
 .title{
     @include title();
-}
 
-.title--big{
-    @include title(44px);
-}
+    &--big{
+        @include title(44px);
+    }
 
-.title--small{
-    @include title(28px)
-}
+    &--small{
+        @include title(28px)
+    }
 
-/*LINKS*/
+}
 
 .link-text{
     @include text(18px);
-    color: $corTextoSecundario;
+    color: variaveis.$corTextoSecundario;
     text-decoration: underline;
+}
+
+.hero {
+    padding: 5.6vw;
+    min-height: 80vh;
+    background-image: url(/dist/images/hero_desktop.jpeg);
 }
