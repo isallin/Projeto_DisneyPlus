@@ -1,0 +1,58 @@
+@use 'variaveis';
+
+.hero {
+    padding: 5.6vw;
+    min-height: 80vh;
+    background-image: url(/dist/images/hero_desktop.jpeg);
+    text-align: left;
+    background-size: cover;
+
+    &__content{
+        max-width: 640px;
+
+        &__branding{
+            margin-top: 150px;
+            max-width: 180px;
+        }
+
+        .title--big{
+            margin-top: 24px;
+            font-weight: bold;
+        }
+
+        .title--small{
+            margin-top: 24px;
+            font-weight: 400;
+        }
+
+        p{
+            margin-bottom: 20px;
+        }
+
+        &__combos{
+            margin: 18px 0;
+            display: flex;
+            justify-content: space-between;
+
+            &__combo{
+                width: calc(50% - 15px);
+
+                button{
+                    padding: 16.5px ;
+                    width: 100%;
+                    display: block;
+                    font-size: 18px;
+                    color: #02172a;
+                    background-color: #02d6e8;
+                    border: #02d6e8;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+
+                p{
+                    margin-top: 24px;
+                }
+            }
+        }
+    }
+}

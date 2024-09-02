@@ -1,59 +1,63 @@
 @use 'variaveis';
+@use 'geral';
+@use 'hero';
 
-@mixin text($fontSize:16px){
+@mixin text($fontSize: 16px) {
     font-size: $fontSize;
-    line-height: $fontSize + 10px;
+    line-height: #{$fontSize + 10px};
     color: variaveis.$corTextoPrincipal;
 }
 
-@mixin title($fontSize:40px){
-    @include title($fontSize);
+@mixin title($fontSize: 40px) {
+    @include text ($fontSize);
+    font-size: $fontSize;
     color: variaveis.$corTextoSecundario;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@font-face{
+    font-family: Avenir;
+    src:url(../../assets/fonts/Avenir-Regular.woff2);
+    font-weight: 400;
 }
 
-body{
-    background-color: variaveis.$corDeFundo;
+@font-face{
+    font-family: Avenir;
+    src:url(../../assets/fonts/Avenir-Regular.woff2);
+    font-weight: 700;
 }
 
-.text{
-    @include text;
+/*TEXTOS*/
 
-    &--big{
-        @include text(18px);
-    }
-
-    &--small{
-        @include text(12px)
-    }
+.text {
+    @include text();
 }
 
-.title{
-    @include title();
-
-    &--big{
-        @include title(44px);
-    }
-
-    &--small{
-        @include title(28px)
-    }
-
+.text--small {
+    @include text(12px);
 }
 
-.link-text{
+.text--big {
     @include text(18px);
+}
+
+/*TÍTULOS*/
+
+.title {
+    @include title();
+}
+
+.title--small {
+    @include title(28px);
+}
+
+.title--big {
+    @include title(44px);
+}
+
+/*OUTROS*/
+
+.link-text {
+    @include text();
     color: variaveis.$corTextoSecundario;
     text-decoration: underline;
-}
-
-.hero {
-    padding: 5.6vw;
-    min-height: 80vh;
-    background-image: url(/dist/images/hero_desktop.jpeg);
 }
