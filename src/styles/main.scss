@@ -1,8 +1,23 @@
 @use 'variaveis';
-@use 'geral';
 @use 'hero';
 @use 'shows';
 @use 'plans';
+@use 'faq';
+
+/*AJUSTES INICIAIS*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: variaveis.$corDeFundo;
+    font-family: Avenir, sans-serif;
+}
+
+/*MIXINS*/
 
 @mixin text($fontSize: 16px) {
     font-size: $fontSize;
@@ -62,12 +77,13 @@
     @include text();
     color: variaveis.$corTextoSecundario;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .button{
     margin:auto;
     padding: 16.5px;
-    width: 90%;
+    width: 96%;
     display: block;
     font-size: 18px;
     color: #02172a;
