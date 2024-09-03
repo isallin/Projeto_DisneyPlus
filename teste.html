@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .plans{
+    padding: 20px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    p{
+        margin-top: 20px;
+    }
+
+    &__table{
+        max-width: 1000px;
+        width: 100%;
+
+        &__thead{
+            height: 260px;
+
+            &__th1{
+                width: 380px
+            }
+            &__th2,
+            &__th3{
+                width: 310px;
+            }
+
+            img{
+                width: 100px;
+            }
+
+            button{
+                padding: 16.5px;
+                width: 90%;
+                display: block;
+                font-size: 18px;
+                color: #02172a;
+                background-color: #02d6e8;
+                border: #02d6e8;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+        }
+        
+        &__tbody{
+            p{
+                margin: 0;
+            }
+
+            &__pLeft{
+                text-align: left;
+            }
+
+            tr{
+                height: 130px;
+            }
+        }
+    }
+}
+    </style>
+</head>
+<body>
+    <table class="plans__table">
+        <thead class="plans__table__thead">
+            <tr>
+                <th class="plans__table__thead__th1"></th>
+                <th class="plans__table__thead__th2">
+                    <img src="./dist/images/disneyplus.svg" alt="Disney+">
+                    <h3 class="text">Padrão</h3>
+                    <button>R$ 43,90/MÊS</button>
+                    <h3 class="text">inclui impostos</h3>
+                </th>
+</body>
+</html>

@@ -1,0 +1,41 @@
+@use 'variaveis';
+
+.shows1{
+    background-image: url(https://cnbl-cdn.bamgrid.com/assets/aa464db0f60b24154bf3f135d9da2545d894f3856fc8535172bab0000675c91c/original);
+}
+
+.shows2{
+    background-image: url(https://cnbl-cdn.bamgrid.com/assets/3e3137d6a1eeeca666c6bccfbc5997f5e704b277e6f8290db7c85727292b686b/original);
+}
+
+.shows1,
+.shows2{
+    margin-top: 100px;
+    padding: 5.6vw;
+    min-height: 100vh;
+    text-align: left;
+    background-size: cover;
+
+    &__content{
+        margin-top: 150px;
+        max-width: 40%;
+    }
+
+    h2{
+        margin-top: 24px;
+    }
+}
+
+.shows3{
+    text-align: center;
+    padding: 5.6vw;
+
+    .text{
+        margin-top: 24px;
+    }
+
+    img{
+        max-width: 2160px;
+        width: 100%;
+    }
+}

@@ -1,6 +1,8 @@
 @use 'variaveis';
 @use 'geral';
 @use 'hero';
+@use 'shows';
+@use 'plans';
 
 @mixin text($fontSize: 16px) {
     font-size: $fontSize;
@@ -60,4 +62,25 @@
     @include text();
     color: variaveis.$corTextoSecundario;
     text-decoration: underline;
+}
+
+.button{
+    margin:auto;
+    padding: 16.5px;
+    width: 90%;
+    display: block;
+    font-size: 18px;
+    color: #02172a;
+    background-color: #02d6e8;
+    border: #02d6e8;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.coloredBG{
+    background-color: #1d1f2b;
+}
+
+.alignleft{
+    text-align: left;
 }
