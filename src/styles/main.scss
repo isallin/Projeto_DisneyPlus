@@ -3,6 +3,8 @@
 @use 'shows';
 @use 'plans';
 @use 'faq';
+@use 'header';
+@use 'footer';
 
 /*AJUSTES INICIAIS*/
 
@@ -10,6 +12,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
+
 }
 
 body {
@@ -47,28 +51,52 @@ body {
 
 .text {
     @include text();
+
+    @media (max-width:768px){
+        @include text(14px)
+    }
 }
 
 .text--small {
     @include text(12px);
+
+    @media (max-width:768px){
+        @include text(11px)
+    }
 }
 
 .text--big {
     @include text(18px);
+
+    @media (max-width:768px){
+        @include text(15px)
+    }
 }
 
 /*TÍTULOS*/
 
 .title {
     @include title();
+
+    @media (max-width:768px){
+        @include title(24px)
+    }
 }
 
 .title--small {
     @include title(28px);
+
+    @media (max-width:768px){
+        @include title(24px)
+    }
 }
 
 .title--big {
     @include title(44px);
+
+    @media (max-width:768px){
+        @include title(26px)
+    }
 }
 
 /*OUTROS*/
@@ -82,19 +110,41 @@ body {
 
 .button{
     margin:auto;
-    padding: 16.5px;
-    width: 96%;
-    display: block;
+    padding: 16.5px 24px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
     font-size: 18px;
-    color: #02172a;
-    background-color: #02d6e8;
-    border: #02d6e8;
+    color: variaveis.$corFonteBotao;
+    background-color: variaveis.$corBotaoPrimario;
+    border: 1px solid variaveis.$corBotaoPrimario;
     border-radius: 4px;
     cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover{
+        background-color: lighten(variaveis.$corBotaoPrimario, 3%);
+    }
+
+    &--secondary{
+        background-color: variaveis.$corBotaoPrimario;
+        border-color:variaveis.$corBotaoPrimario;
+    }
+
+    &--dark{
+        background-color: rgba(variaveis.$corBotaoDark, 0.8);
+        color: variaveis.$corTextoSecundario;
+        border-color:variaveis.$corTextoPrincipal;
+
+        &:hover{
+            background-color: lighten(variaveis.$corBotaoDark, 3%);
+        }
+    }
 }
 
 .coloredBG{
-    background-color: #1d1f2b;
+    background-color: variaveis.$corFundoPremium
 }
 
 .alignleft{

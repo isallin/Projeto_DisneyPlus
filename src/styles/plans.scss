@@ -17,9 +17,19 @@
         width: 100%;
         border-collapse: collapse;
 
+        @media (max-width:768px){
+            width: 98%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        button{
+            width: 95%;
+        }
+        
         &__plan{
             height: 260px;
-            
+                        
             img{
                 width: 100px;
                 margin-top: 24px;
@@ -31,11 +41,16 @@
 
             &__1{
                 width: 380px;
+
+                @media (max-width:768px){
+                    display: none;
+                }
             }
             &__2,
             &__3{
                 width: 310px;
                 border-top: solid 2px variaveis.$corBordaGrossa;
+                }
 
                 .text{
                     margin: 24px 0;
@@ -44,6 +59,11 @@
         }
         
         &__infos{
+
+            @media (max-width:768px){
+                display: block;
+            }
+
             .text{
                 margin: 0;
             }
@@ -60,4 +80,3 @@
         display: flex;
         flex-direction: column;
     }
-}

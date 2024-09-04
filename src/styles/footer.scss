@@ -1,0 +1,17 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    
+    &__logo{
+        max-width: 120px;
+        width: 100%;
+    }
+    
+    &__infos{
+        margin: 24px 0;
+        max-width: 1024px;
+        width: 100%;
+    }
+}

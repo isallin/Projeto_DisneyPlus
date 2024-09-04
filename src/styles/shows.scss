@@ -1,28 +1,55 @@
 @use 'variaveis';
 
-.shows1{
-    background-image: url(https://cnbl-cdn.bamgrid.com/assets/aa464db0f60b24154bf3f135d9da2545d894f3856fc8535172bab0000675c91c/original);
-}
-
-.shows2{
-    background-image: url(https://cnbl-cdn.bamgrid.com/assets/3e3137d6a1eeeca666c6bccfbc5997f5e704b277e6f8290db7c85727292b686b/original);
-}
-
 .shows1,
 .shows2{
-    margin-top: 100px;
-    padding: 5.6vw;
-    min-height: 100vh;
-    text-align: left;
-    background-size: cover;
+    align-items: left;
+    padding-top: 2.3vw;
 
-    &__content{
-        margin-top: 150px;
-        max-width: 40%;
+    @media (max-width:768px){
+        padding-bottom: 20vw;
     }
 
-    h2{
-        margin-top: 24px;
+    img{
+        max-width: 100%;
+    }
+
+    &__text__container{
+        padding: 0 2vw;
+
+        h2{
+            margin-bottom: 24px;
+        }
+
+    }
+
+    
+
+    &--image-full-width{
+        display: block;
+        position: relative;
+
+        
+        img{
+            width: 100%
+        }
+
+        &__text__container{
+            position: absolute;
+            top: 10vw;
+            left: 5%;
+            width: calc(45% - 9vw);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+
+            @media (max-width:768px){
+                position: relative;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                padding: 0vw 5vw 25vw 5vw;
+            }
+        }
     }
 }
 

@@ -10,11 +10,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header class="header">
+        <div class="header__container">
+            <h1>
+                <img class="header__logo" src="./dist/images/disneyplus.svg" alt="Disney+">
+            </h1>
+            <ul class="header__links" >
+                <li class="header__links__item">
+                    <a href="#" class="button button--secondary">Assine agora</a>
+                </li>
+                <li class="header__links__item">
+                    <a href="#" class="button button--dark">Entrar</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+
     <section class="hero">
         <div class="hero__content">
-            <h1 class="hero__content__branding">
+            <div class="hero__content__branding">
                 <img src="./dist/images/disneyplus.svg" alt="Disney+">
-            </h1>
+            </div>
             <h3 class="title--big"> 
                 Chegou o novo Disney+
             </h3>
@@ -36,16 +54,30 @@
             </p>
         </div>
     </section>
-    <section class="shows1">
-        <div class="shows1__content">
-            <h2 class="title--small"> 
+
+
+
+    <section class="shows1 shows1--image-full-width">
+        <div class="shows1 shows1--image-full-width__text__container">
+            <h2 class="title--small">
                 Os melhores filmes e séries do Star e esportes com a ESPN
             </h2>
-            <h2 class="text">
+            <p class="text">
                 Estreias de filmes, clássicos, sagas, comédias animadas e produções originais do Star, além de esportes e programação ao vivo com a ESPN.
-            </h2>
+            </p>
         </div>
+
+        <picture>
+            <source
+                srcset="//cnbl-cdn.bamgrid.com/assets/3bde2244e1f21b351092ba295adc246fc272b20aec9dcf99507206015d5a4dde/original"
+                media="(max-width:768px)"
+            >
+            <img src="https://cnbl-cdn.bamgrid.com/assets/aa464db0f60b24154bf3f135d9da2545d894f3856fc8535172bab0000675c91c/original">
+        </picture>
     </section>
+
+
+    
     <section class="plans">
         <h2 class="title">Qual plano você vai escolher?</h2>
         <p class="text">Você pode alterar ou cancelar seu plano quando quiser.</p>
@@ -143,16 +175,32 @@
             <span class="text--small">A qualidade de vídeo e áudio e os downloads estão sujeitos ao serviço de internet, aos recursos do dispositivo, ao tipo de conteúdo e ao plano.</span>
         </div>
     </section>
-    <section class="shows2">
-        <div class="shows2__content">
-            <h2 class="title">
+
+
+
+    <section class="shows2 shows2--image-full-width">
+        <div class="shows2 shows2--image-full-width__text__container">
+            <h2 class="title--small">
                 Só no Disney+
             </h2>
-            <h2 class="text">
+            <p class="text">
                 As melhores produções originais e exclusivas!
-            </h2>
+            </p>
         </div>
+
+        <picture>
+            <source
+            srcset="//cnbl-cdn.bamgrid.com/assets/cfde993a037f0a16a8aa90e3412fc7e48ec77d9ddd2d2154e561338f7bc41a4f/original"
+            media="(max-width:768px)"
+            >
+            <img src="https://cnbl-cdn.bamgrid.com/assets/3e3137d6a1eeeca666c6bccfbc5997f5e704b277e6f8290db7c85727292b686b/original">
+        </picture>
+    
+    
     </section>
+
+
+
     <section class="shows3">
         <div class="shows3__content">
             <h2 class="title">
@@ -161,10 +209,19 @@
             <h2 class="text">
                 Aproveite seus favoritos em qualquer momento, em qualquer lugar.
             </h2>
-            <img src="https://cnbl-cdn.bamgrid.com/assets/aa3a563e260b8f23c8278f1f772c69e300b6275e6319834309b1a49fedb23801/original"
-            alt="Imagem com TV, computador, tablet e celular">
-        </div>
+            <picture>
+                <source
+                srcset="//cnbl-cdn.bamgrid.com/assets/91a18aa3309a6927e3dedc9732f619222cc140b40e8eda6e5a3e63b18b2c0d5c/original"
+                media="(max-width:768px)"
+                >
+                <img src="https://cnbl-cdn.bamgrid.com/assets/aa3a563e260b8f23c8278f1f772c69e300b6275e6319834309b1a49fedb23801/original"
+                alt="Imagem com TV, computador, tablet e celular">
+            </picture>
+            </div>
     </section>
+
+
+
     <section class="faq">
         <h2 class="title">Perguntas frequentes</h2>
             <ul class="faq__questions">
@@ -209,6 +266,16 @@
             </ul>
         
     </section>
+
+    <footer class="footer">
+        <img class="footer__logo" src="./dist/images/disneyplus.svg">
+        <div class="footer__infos">
+            <p class="text--small">© 2024 Disney e suas empresas afiliadas. Todos os direitos reservados.</p>
+            <p class="text--small">A programação do conteúdo esportivo varia de acordo com o plano. Para usar o Disney+, é necessário ser assinante e ter mais de 18 anos de idade. Conteúdo sujeito a disponibilidade.</p>
+            <p class="text--small">O serviço Disney+ é comercializado por The Walt Disney Company (Brasil) Ltda., World Trade Center, Av. Das Nações Unidas, 12.551, 12.555, 12.559, Piso 10, São Paulo/SP – CEP 04578-903, Brasil e CNPJ/M 73.042.962/0004-20</p>
+        </div>
+    </footer>
+
     <script src="./src/main.js"></script>
 </body>
 </html>
