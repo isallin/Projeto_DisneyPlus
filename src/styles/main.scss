@@ -149,4 +149,17 @@ body {
 
 .alignleft{
     text-align: left;
+
+    @media (max-width:768px){
+        text-align: center;
+        font-size: 4.5vw;
+    }
+}
+
+
+.plans-display{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
 }

@@ -1,82 +1,100 @@
-@use 'variaveis';
-
-.plans{
-    padding: 20px 40px;
-    text-align: center;
+.plans--infos{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    p{
-        margin-top: 20px;
-    }
 
-    &__list{
-        margin-top: 84px;
-        max-width: 1000px;
-        width: 100%;
-        border-collapse: collapse;
-
+    .plans--display{
         @media (max-width:768px){
-            width: 98%;
+            display: none;
+        }
+    }
+}
+
+.plans{
+    &__list{
+        display: flex;
+
+        &__item{
+            width: 290px;
+            height: 260px;
+            padding: 10px;
             display: flex;
             flex-direction: column;
-        }
-        
-        button{
-            width: 95%;
-        }
-        
-        &__plan{
-            height: 260px;
-                        
-            img{
-                width: 100px;
-                margin-top: 24px;
-            }
-
-            th{
-                border-bottom: solid 2px variaveis.$corTextoPrincipal;
-            }
-
-            &__1{
-                width: 380px;
-
-                @media (max-width:768px){
-                    display: none;
-                }
-            }
-            &__2,
-            &__3{
-                width: 310px;
-                border-top: solid 2px variaveis.$corBordaGrossa;
-                }
-
-                .text{
-                    margin: 24px 0;
-                }
-            }
-        }
-        
-        &__infos{
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #ddd;
 
             @media (max-width:768px){
-                display: block;
+                width: 45vw;
+                height: auto;
             }
 
-            .text{
-                margin: 0;
+            img{
+                width: 100px;
+
+                @media (max-width:768px){
+                    width: 80px;
+                    margin: 5vw 0;
+                }
             }
 
-            tr{
-                height: 130px;
-                border-bottom: solid 2px variaveis.$corBordaFina;
+            .button{
+                margin: 5px;
+                width: 250px;
+
+                @media (max-width:768px){
+                    padding: 3vw 3vw;
+                    width: 100%;
+                    font-size: 15px;
+                    margin-bottom: 5vw;
+                }
+            }
+
+            h3{
+                @media (max-width:768px){
+                    margin-bottom: 3vw;
+                }
+            }
+        }
+        
+    }
+}
+
+.infos{
+    &__list{
+        width: 870px;
+        height: 130px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-bottom: 1px solid #9c9c9c;
+
+        @media (max-width:768px){
+            width: 90vw;
+            height: auto;
+            grid-template-columns: repeat(2, 1fr);
+
+            div:nth-child(1){
+                grid-column: 1/-1;
+                height: auto;
+                padding-top: 5vw;
+            }
+        }
+        &__item{
+            padding: 0 10px;
+            @media (max-width:768px){
+                width: 100%;
+                height: 45vw;
+                border: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
             }
         }
     }
+}
 
-    .observation{
-        margin-top: 24px;
-        display: flex;
-        flex-direction: column;
-    }
+
