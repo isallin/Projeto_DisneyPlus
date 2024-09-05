@@ -27,7 +27,7 @@
         display: flex;
         justify-content: space-between;
 
-        @media (max-width:768px){
+        @media (max-width: 768px){
             padding: 1vw;
         }
     }
@@ -38,7 +38,7 @@
         margin:5px;
         transition: opacity .5s ease;
 
-        @media (max-width:768px){
+        @media (max-width: 768px){
             height: 5vh;
             margin-top: 1.5vh;
         }
@@ -47,9 +47,14 @@
     &__links{
         display: flex;
 
+        @media (max-width: 768px){
+            padding-right: 5%;
+        }
+
         &__item{
             margin: 5px;
             transition: opacity .5s ease;
+
         
     }
     
@@ -58,7 +63,7 @@
     .button{
         height: 50px;
 
-        @media (max-width:768px){
+        @media (max-width: 768px){
             font-size: 12px;
             height: 5.5vh;
             width: 95%;
